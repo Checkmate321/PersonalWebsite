@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nathan L</title>
+  <link rel="icon" href="/files/logos/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+  <div id="header"></div>
+  <main>
+  <div class="page-header">
+    <a href="projects.html" class="button back-button">←</a>
+    <div class="page-title-block">
+      <h2><a href="https://www.thebluealliance.com/team/4013/history" target="_blank" class="plain-link">4013 Clockwork Mania</a></h2>
+      <p class="page-date">January 2025 - August 2025</p>
+    </div>
+    <div class="spacer"></div>
+  </div>
+
+  <div class="project-layout">
+    <div class="project-text">
+      <p>&emsp;I joined Clockwork Mania, an FRC team, for the 2025 season, working across the CAD, electrical, mechanical, and strategy subteams to help build the robot, while also pitching in on outreach when needed. The hands-on build process gave me experience with CNC machining, resin and FDM 3D printing, laser cutting, soldering, and manual fabrication tools like drill presses, miter saws, band saws, and table saws, working across metal, wood, polycarbonate, and acrylic. Specifically, I specialized in 3D printers, fixing clogged nozzles, broken ceramic heaters, fried mainboards, and soldering on mismatching ports. That season, the team won the Impact Award, the most prestigious award at the Magnolia Regional, recognizing our impact both on and off the field. Beyond the competition itself, the team's work has been featured on local news outlets including Fox 35, WESH 12, and Space TV, and showcased at industry conferences like SpaceCom and ITSEC. Even in a single season, the experience deepened my fabrication skills and gave me a close look at how a larger, more established program operates at a higher level of competition.</p>
+    </div>
+
+    <div class="project-carousel" id="projectCarousel">
+      <div class="carousel-frame">
+        <div class="carousel-track">
+          <img src="/files/clockworkmania/SpaceCom.png"/>
+          <img src="/files/clockworkmania/TeamWorlds.png"/>
+          <img src="/files/clockworkmania/3DPrinters.png"/>
+          <img src="/files/clockworkmania/SchoolShow.png"/>
+          <img src="/files/clockworkmania/WorkingOnBot.png"/>
+        </div>
+      </div>
+
+      <div class="carousel-controls">
+        <button class="carousel-prev" aria-label="Previous image">PREV</button>
+        <div class="carousel-dots"></div>
+        <button class="carousel-next" aria-label="Next image">NEXT</button>
+      </div>
+    </div>
+  </div>
+  <h3>Grinder</h3>
+    <div class="project-layout">
+      <div class="project-text">
+        <p>&emsp;Grinder is our 2025 FIRST World Championship robot, competing in a game called Reefscape. Grinder utilizes a swerve drive allowing it to move in any direction at max speed while maintaining sufficient ground grip during collisions with other bots. Atop the base, Grinder features a 3 stage elevator to allow for gamepiece pickup at all heights. On the elevator, our intake/outtake allows for both algae and coral to be carried and placed in their respective locations. The algae intake squished the 16” rubber balls to maintain sufficient grip and the coral intake utilized flexible rollers to facilitate handling. Metal parts were machined with a CNC while plastic parts were 3D printed with nylon, and resin. Overall, Grinder is optimized to be fast, versatile, and defend against opponents' bots.</p>
+      </div>
+      <model-viewer
+        src="/files/clockworkmania/RoboCAD25V2.glb"
+        camera-controls
+        auto-rotate
+        shadow-intensity="0"
+        environment-image="legacy"
+        exposure="0.5"
+        orientation="0deg 270deg 130deg">
+      </model-viewer>
+    </div>
+  <h3>Robot Cart</h3>
+    <div class="project-layout">
+      <model-viewer
+        src="/files/clockworkmania/RoboCartV2.glb"
+        camera-controls
+        auto-rotate
+        shadow-intensity="0"
+        environment-image="legacy"
+        exposure="0.5"
+        orientation="0deg 270deg 130deg">
+      </model-viewer>
+      <div class="project-text">
+        <p>&emsp;I also lead the construction of the robot cart. We utilized a 3 division cart that would be able to carry the robot securely, have extra storage for batteries, and have a mount for the drivers station which would in turn carry the controllers. The whole frame is made of aluminum extrusions, cut and jointed using side plates. The part where the robot is rested on had an open base that allowed for easy work on the bottom of the bot while elevated. This would latch to the storage compartment and the drivers station would rest atop the storage compartment.</p>
+      </div>
+    </div>
+    <p></p>
+    <p></p>
+  </main>
+  <div id="footer"></div>
+  <script src="/script.js"></script>
+</body>
+</html>

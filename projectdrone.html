@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nathan L</title>
+  <link rel="icon" href="/files/logos/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+  <div id="header"></div>
+  <main>
+    <div class="page-header">
+      <a href="projects.html" class="button back-button">←</a>
+      <div class="page-title-block">
+        <h2>FPV Drone</h2>
+        <p class="page-date">Feburary 2026 - Current</p>
+      </div>
+      <div class="spacer"></div>
+    </div>
+
+  <div class="project-layout">
+    <div class="project-text">
+      <p>&emsp;I built a 5” FPV drone from scratch for under $100. Starting from watching youtube videos of other drone builds, then chose parts that would also work for the budget. After watching more tutorials, I assembled and soldered everything together, before checking for shorts. Finishing the physical build, I then worked on software, flashing Betaflight firmware, binding the ELRS receiver to my RadioMaster Pocket transmitter, configuring the VTX, and setting up the OSD to get real-time flight data overlaid on the video feed. Getting everything working reliably meant troubleshooting along the way which was a pain to sort out.</p>
+      <p>&emsp;Still, before flying the real thing, I trained on a simulator without the risk of crashing actual hardware. That practice made the transition to real flight far smoother, and gave me a genuine appreciation for how much the electronics, tuning, and pilot skill all have to come together for a build like this to actually fly the way it's supposed to. Then, I took it out to a field and crashed the drone. Again and again. Just knowing the drone is real this time instead of a simulator made me nervous, but after each crash, I get slightly better. Still have a long way to go but I’m enjoying the journey.</p>
+    </div>
+
+    <div class="project-carousel" id="projectCarousel">
+      <div class="carousel-frame">
+        <div class="carousel-track">
+          <img src="/files/drone/DroneBuilding.jpg"/>
+          <img src="/files/drone/DroneSoldering.jpg"/>
+          <img src="/files/drone/VoltageCheck.jpg"/>
+        </div>
+      </div>
+
+      <div class="carousel-controls">
+        <button class="carousel-prev" aria-label="Previous image">PREV</button>
+        <div class="carousel-dots"></div>
+        <button class="carousel-next" aria-label="Next image">NEXT</button>
+      </div>
+    </div>
+  </div>
+  <h3>Interactive CAD</h3>
+    <div class="project-layout">
+      <model-viewer
+        src="/files/drone/DroneCADV2.glb"
+        camera-controls
+        auto-rotate
+        shadow-intensity="0"
+        environment-image="legacy"
+        exposure="0.5"
+        orientation="0deg 90deg 30deg">
+      </model-viewer>
+    </div>
+    <p></p>
+    <p></p>
+  </main>
+  <div id="footer"></div>
+  <script src="/script.js"></script>
+</body>
+</html>

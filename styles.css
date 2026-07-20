@@ -1,0 +1,433 @@
+/* Set up*/
+  :root {
+    --light: #D7EFF4;
+    --dark: #2B565F;
+    --c1: #DFCA95;
+    --c2: #BE8E7E;
+  }
+
+  @font-face {
+    font-family: 'Rethink Sans';
+    src: url('files/fonts/rethinksans/RethinkSans-VariableFont_wght.ttf') format('truetype-variations');
+    font-weight: 400 800;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Rethink Sans Italic';
+    src: url('files/fonts/rethinksans/RethinkSans-Italic-VariableFont_wght.ttf') format('truetype-variations');
+    font-weight: 400 800;
+    font-style: italic;
+  }
+
+  html, body {
+    height: 100%;
+    font-family: 'Rethink Sans', sans-serif;
+    font-weight: 500;
+    color: var(--light);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--dark);
+    margin: 0;
+  }
+  
+  main {
+    margin: 3.5rem 0 2.2rem 0;
+    padding: 1vh 3vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    overflow-y: auto;
+
+    mask-image: linear-gradient(
+    to bottom,
+    transparent 0,
+    black 35px,
+    black calc(100% - 60px),
+    transparent 100%
+  );
+  }
+
+  h2 {
+    margin: 2rem 1rem 0.5rem 1rem;
+    color: var(--c2);
+    font-size: clamp(1.5rem, 4.5vw, 2.3rem);
+  }
+
+  h3 {
+    font-size: 1.3rem;
+    margin: 0.7rem 0 0.5rem 0;
+  }
+
+  p {
+    margin: 0 0 0.5rem 0;
+    overflow-wrap: break-word;
+    font-weight: 450;
+  }
+
+  .content {
+    width: 100%;
+    max-width: 800px;
+  }
+
+  .plain-link {
+    color: inherit;         /* pulls the color from the parent h2, not the browser's default link blue */
+    text-decoration: none;  /* removes the underline */
+  }
+
+/* Header and Footer Styles */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1rem 4vw;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+    width: 100%;
+    padding: .5rem 2vw;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    font-size: 0.9rem;
+  }
+
+  .nav-left,
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 4vw;
+  }
+
+  .nav-left {
+    transform: translateX(-2vw);
+  }
+
+  .headerlink {
+    color: var(--light);
+    text-decoration: none;
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    transition: color .25s;
+  }
+
+  .headerlink:hover {
+    color: var(--c2);
+  }
+
+  .logo-mark {
+    display: block;
+    width: clamp(2rem, 6vw, 3rem);
+    aspect-ratio: 1;
+    background: currentColor;
+    mask: url("files/logos/NLLogo.svg") center / contain no-repeat;
+    -webkit-mask: url("files/logos/NLLogo.svg") center / contain no-repeat;
+  }
+
+  footer span {
+    color: var(--c2);
+    font-weight: 750;
+  }
+
+  .page-header {
+    width: 100%;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+  }
+
+  .back-button {
+    grid-column: 1;
+    justify-self: start;
+    margin: 0;
+  }
+
+/* Card Styles */
+  .card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    padding: 1rem 2rem;
+    border: 1px solid currentColor;
+    border-radius: 1rem;
+    box-sizing: border-box;
+    margin: 0 0 1rem 0;
+    transition: color .25s, border-color .25s;
+  }
+
+  .card:hover {
+    color: var(--c1);
+  }
+  .card-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .button {
+    color: var(--light);
+    border: 1px solid currentColor;
+    padding: .5rem 1rem;
+    margin: 0 1vw;
+    clip-path: polygon(1.5rem 0, 100% 0, 100% calc(100% - 1.5rem), calc(100% - 1.5rem) 100%, 0 100%, 0 1.5rem);
+    text-decoration: none;
+    font-size: clamp(.8rem, 2vw, .9rem);
+    transition: color .25s, border-color .25s;
+    border-radius: 1rem;
+  }
+
+  .button:hover {
+    color: var(--c1);
+  }
+  
+/* Hero Section Styles */
+  .herobackground {
+    background-image: url("files/photos/hero\ background.jpg");
+    background-size: cover;
+    background-position: 75% 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+
+  .hero-name {
+    font-size: clamp(2rem, 8vw, 7rem);
+    margin: 0;
+    text-align: center;
+  }
+
+  .hero-content {
+    transform: translateY(-25vh);
+    text-align: center;
+  }
+
+  .hero-textbox {
+    text-align: center;
+    margin: 0 2rem;
+    font-size: clamp(1rem, 3vw, 1.25rem);
+  }
+
+  .hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+/* Education */
+  .cert-logo {
+    display: inline-block;
+    height: clamp(4rem, 8vw, 4.5rem);
+  }
+
+  .cert-logo img {
+    height: 100%;
+    width: auto;
+    display: block;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease-out, transform 0.3s ease-out; 
+  }
+
+  .cert-logo:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+  }
+
+/* Contact Form */
+  .form-group {
+    margin-bottom: 1.2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-family: 'Rethink Sans', sans-serif;
+    font-size: 1rem;
+    color: var(--light);
+    background-color: transparent;
+    border: 1px solid var(--light);
+    border-radius: 0.5rem;
+    padding: 0.7rem 0.9rem;
+    box-sizing: border-box;
+    transition: border-color 0.25s;
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+    font-family: inherit;
+  }
+
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: var(--light);
+    opacity: 0.5;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--c2);
+  }
+
+  .form-submit {
+    color: var(--light);
+    background-color: transparent;
+    border: 1px solid currentColor;
+    padding: .7rem 1.4rem;
+    clip-path: polygon(1.5rem 0, 100% 0, 100% calc(100% - 1.5rem), calc(100% - 1.5rem) 100%, 0 100%, 0 1.5rem);
+    border-radius: 1rem;
+    font-family: 'Rethink Sans', sans-serif;
+    font-size: clamp(.9rem, 2vw, 1rem);
+    font-weight: 500;
+    cursor: pointer;
+    transition: color .25s, border-color .25s;
+  }
+
+  .form-submit:hover {
+    color: var(--c1);
+  }
+
+/* Project Layout */
+  .project-layout {
+    display: flex;
+    flex-wrap: wrap; /* this is what lets it drop to a new row on narrow screens */
+    gap: 2rem;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 0 1rem 0
+  }
+
+  .project-text {
+    flex: 1 1 400px; /* grow, shrink, base width — wraps naturally once too narrow */
+  }
+
+  .page-title-block {
+    text-align: center;
+  }
+
+  .page-title-block h2 {
+    margin-bottom: 0; /* tightens gap to the date below */
+  }
+
+  .page-date {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    opacity: 0.75;
+    color: var(--c1);
+  }
+/* Carousel */
+  .project-carousel {
+    flex: 1 1 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .carousel-controls {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  .carousel-prev,
+  .carousel-next {
+    background: none;
+    border: none;
+    color: var(--light);
+    font-family: 'Rethink Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    padding: 0;
+    transition: opacity 0.25s;
+  }
+
+  .carousel-prev:hover,
+  .carousel-next:hover {
+    opacity: 0.7;
+  }
+
+  .carousel-dots {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .carousel-dots span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 1px solid var(--light);
+    background: transparent;
+    cursor: pointer;
+    transition: background 0.25s;
+  }
+
+  .carousel-dots span.active {
+    background: var(--light);
+  }
+
+  .carousel-frame {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 1 / 1;
+    border: 1px solid var(--light);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    position:relative;
+  }
+
+  .carousel-track {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .carousel-track img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+  }
+
+  .carousel-track img.active {
+    opacity: 1;
+  }
+
+/* Model Viewer */
+  model-viewer {
+    width: 400px;
+    height: 300px;
+    border-radius: 1rem;
+    margin: 0 auto;
+    flex-shrink: 0;
+  }

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nathan L</title>
+  <link rel="icon" href="/files/logos/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+  <div id="header"></div>
+  <main>
+    <div class="page-header">
+      <a href="projects.html" class="button back-button">←</a>
+      <div class="page-title-block">
+        <h2><a href="https://fractalfusion-tau.vercel.app/" target="_blank" class="plain-link">27188 Fractal Fusion</a></h2>
+        <p class="page-date">September 2024 - Current</p>
+      </div>
+      <div class="spacer"></div>
+    </div>
+  <div class="project-layout">
+    <div class="project-text">
+      <p>&emsp;I helped found Fractal Fusion in 2024, a FIRST Tech Challenge (FTC) team, after convincing my high school to sponsor a new team, then helped recruit and organize a small group of friends to build it from nothing. We had limited prior robotics experience, so our first season was spent learning through workshops led by more advanced teams while building our first robot in parallel.</p>
+      <p>&emsp;I became co-captain and CAD captain, splitting my time between robot design and the leadership work needed to keep a young program functional. On the technical side, I contributed to design strategy, CAD, and 3D printing. On the organizational side, I helped with outreach efforts and handled the day to day leadership decisions that come with running a team through a competitive season.</p>
+      <p>&emsp;That combination paid off: we qualified for the state championship in 2025 and advanced to worlds in 2026, reaching the playoffs and climbing as high as 11th in the world at one point in the season. But the bigger takeaway for me wasn't the ranking, it was learning how a team goes from an idea with no infrastructure to a program capable of competing at an international level, and what it actually takes (technically and organizationally) to sustain that growth season over season.</p>
+    </div>
+
+    <div class="project-carousel" id="projectCarousel">
+      <div class="carousel-frame">
+        <div class="carousel-track">
+          <img src="/files/fractalfusion/Confetti.jpg"/>
+          <img src="/files/fractalfusion/FFBotStates.png"/>
+          <img src="/files/fractalfusion/FFBotStates2.png"/>
+          <img src="/files/fractalfusion/FFTeamWorlds.png"/>
+          <img src="/files/fractalfusion/FFWorldsBotTop.png"/>
+          <img src="/files/fractalfusion/FractalStatesTeam.png"/>
+          <img src="/files/fractalfusion/KoolStack.png"/>
+          <img src="/files/fractalfusion/Ranking.PNG"/>
+        </div>
+      </div>
+
+      <div class="carousel-controls">
+        <button class="carousel-prev" aria-label="Previous image">PREV</button>
+        <div class="carousel-dots"></div>
+        <button class="carousel-next" aria-label="Next image">NEXT</button>
+      </div>
+    </div>
+  </div>
+  <h3>Sierah</h3>
+    <div class="project-layout">
+      <div class="project-text">
+        <p>&emsp;Sierah is our 2026 FIRST World Championship robot, purpose built for collecting and shooting plastic balls 5” in diameter with speed, precision, and reliability while working alongside an alliance partner to maximize match performance. Its omnidirectional mecanum drivetrain, powered by precision odometry and a Pinpoint IMU, enables fast and repeatable autonomous navigation while maintaining exceptional driver control. A 15.5-inch intake uses asymmetrical funneling wedges and optimized motor speeds to continuously collect and transfer multiple game pieces without jams, feeding them into a custom flywheel shooter capable of accurate scoring from anywhere on the field. An adjustable hood, custom-molded weighted flywheels, Limelight vision for automatic alignment, and intelligent software work together to maximize scoring consistency, while a compact, lightweight chassis provides stability during aggressive acceleration and rapid cycling. Designed through extensive prototyping and iterative testing, Sierah maximizes speed, weight, and reliability.</p>
+      </div>
+      <model-viewer
+        src="/files/fractalfusion/RoboCAD-optimizedV3.glb"
+        camera-controls
+        auto-rotate
+        shadow-intensity="0"
+        environment-image="legacy"
+        exposure="0.5"
+        orientation="0deg 270deg 130deg">
+      </model-viewer>
+    </div>
+  <h3>Juliet</h3>
+    <div class="project-layout">
+      <model-viewer
+        src="/files/fractalfusion/RoboCAD25V3.glb"
+        camera-controls
+        auto-rotate
+        shadow-intensity="0"
+        environment-image="legacy"
+        exposure="0.4"
+        orientation="0deg 270deg 130deg">
+      </model-viewer>
+      <div class="project-text">
+        <p>&emsp;Juliet is our 2025 Florida Championship robot, engineered to grab blocks laid on the ground, attach clips to them, and place them into suspended buckets. Built on a mechanical wheel drivetrain, Juliet features dual rotatable viper slides that enable high basket scoring, reliable specimen placement, and extended reach into the submersible. An optimized claw intake securely grips both samples and specimens while allowing fast, consistent pickups in tight spaces. A dedicated U-channel hanging mechanism completes the design, allowing Juliet to efficiently perform every major game objective with reliability throughout competition. Overall, Juliet is designed to be versatile and simplistic.</p>
+      </div>
+    </div>
+  <h3>Dragonis
+  </h3>
+    <div class="project-layout">
+      <div class="project-text">
+        <p>&emsp;Dragonis is our 2025 off season robot. We made it as a theoretical design to the Into The Deep FTC game. Dragonis utilizes custom aluminum framing attached to swift slides and a rotatable, extendable arm. On the arm, there is a limelight camera used for color sorting and a rotatable claw for sample collection. On the other side, the hanging mechanism is installed with retractable clips. Although quite optimized, Dragonis utilized high quality hardware that made it expensive.</p>
+      </div>
+      <model-viewer
+        src="/files/fractalfusion/RoboCADoff25V2.glb"
+        camera-controls
+        auto-rotate
+        shadow-intensity="0"
+        environment-image="legacy"
+        exposure="0.4"
+        orientation="0deg 270deg 130deg">
+      </model-viewer>
+    </div>
+    <p></p>
+    <p></p>
+  </main>
+  <div id="footer"></div>
+  <script src="/script.js"></script>
+</body>
+</html>
