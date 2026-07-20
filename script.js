@@ -1,18 +1,18 @@
 /* Header and Footer */
-  fetch('/header.html')
+  fetch('header.html')
     .then(res => res.text())
     .then(html => {
       document.getElementById('header').innerHTML = html;
     });
 
-  fetch('/footer.html')
+  fetch('footer.html')
     .then(res => res.text())
     .then(html => {
       document.getElementById('footer').innerHTML = html;
     });
 
 /* Sound Effects */
-  const clickSound = new Audio('../files/audio/click.wav');
+  const clickSound = new Audio('files/audio/click.wav');
   clickSound.volume = 0.1;
 
   document.addEventListener('click', (e) => {
