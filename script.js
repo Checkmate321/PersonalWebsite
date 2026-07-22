@@ -29,7 +29,7 @@
         } else {
           window.location.href = target.href; // Regular navigation
         }
-      }, 90); 
+      }, 120); 
     } else if (target) {
       clickSound.currentTime = 0;
       clickSound.play();
